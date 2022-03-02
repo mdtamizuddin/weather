@@ -2,7 +2,7 @@
 const noakhali =()=>{
     document.getElementById('spinner').style.display="flex";
     const url = `
-    http://api.weatherapi.com/v1/current.json?key=68b1723daf7c4908bef123733220203&q=noakhali&aqi=yes`;
+    https://api.weatherapi.com/v1/current.json?key=68b1723daf7c4908bef123733220203&q=noakhali&aqi=yes`;
     fetch(url)
     .then(res => res.json())
     .then(data => noakhaliData(data))
@@ -25,7 +25,7 @@ const searchBtn =()=>{
     const api_key =`68b1723daf7c4908bef123733220203`;
     const cityName = document.getElementById('city-input').value;
     const url = `
-    http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${cityName}&aqi=yes`;
+    https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${cityName}&aqi=yes`;
     fetch(url)
     .then(res => res.json())
     .then(data => allData(data))
